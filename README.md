@@ -4,8 +4,11 @@ Read the windows SID in VBA code
 code to be added to a procedure:
 
   Dim objWMIService As Object
+
   Dim objAccount  As Object
+
   Dim strComputer As String
+
   
   strComputer = "."
   Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
