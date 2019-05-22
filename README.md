@@ -54,9 +54,14 @@ code to be added to a procedure:
 
   Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
 
-  Set objAccount = objWMIService.Get("Win32_SID.SID='S-1-5-21-746137067-1035525444-725345543-4119'")
+  Set objAccount = objWMIService.Get("Win32_SID.SID='S-1-5-21-xxxxxxxxx-xxxxxxxxxx-xxxxxxxxx-xxxx'")
+
   Debug.Print "AccountName; " & objAccount.AccountName
+  
   Debug.Print "BinaryRepresentation[]; " & objAccount.BinaryRepresentation(0)
+  
   Debug.Print "ReferencedDomainName; " & objAccount.ReferencedDomainName
+  
   Debug.Print "SID; " & objAccount.SID
+  
   Debug.Print "SidLength; " & objAccount.SidLength
